@@ -283,7 +283,6 @@ Record all failures in `findings.md` using this table format:
 ## What Is Not in Scope for v1
 
 - Mobile / native app testing
-- Color contrast (will be added in v2 with visual audit tooling)
 - PDFs or downloadable documents
 - Video / audio content
 - Third-party embedded components (maps, social widgets, etc.)
