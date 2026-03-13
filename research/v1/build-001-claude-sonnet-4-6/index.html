@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="Sample Site home">
+        <svg class="logo-svg" viewBox="0 0 120 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="0" y="8" width="20" height="20" rx="4" fill="#7c6bff"/>
+          <rect x="6" y="14" width="8" height="8" rx="2" fill="#fff" opacity="0.85"/>
+          <text x="28" y="25" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#ffffff" letter-spacing="0.5">Sample</text>
+        </svg>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="layout">
+    <main class="main-content" id="main-content">
+      <figure class="hero-figure">
+        <svg class="hero-image" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hero image placeholder showing an abstract landscape">
+          <defs>
+            <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#1a1a2e"/>
+              <stop offset="100%" stop-color="#4a3f8f"/>
+            </linearGradient>
+          </defs>
+          <rect width="800" height="300" fill="url(#heroGrad)"/>
+          <ellipse cx="400" cy="320" rx="380" ry="140" fill="#2e2e5e" opacity="0.6"/>
+          <circle cx="160" cy="90" r="50" fill="#7c6bff" opacity="0.3"/>
+          <circle cx="640" cy="70" r="70" fill="#7c6bff" opacity="0.2"/>
+          <rect x="340" y="110" width="120" height="4" rx="2" fill="#fff" opacity="0.15"/>
+          <rect x="310" y="126" width="180" height="4" rx="2" fill="#fff" opacity="0.1"/>
+          <text x="400" y="165" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#ffffff" opacity="0.5">Hero Image Placeholder</text>
+        </svg>
+        <figcaption class="hero-caption">A short descriptive caption for the hero image above.</figcaption>
+      </figure>
+
+      <h1>Page Title</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <button class="btn-learn-more" id="open-modal">Learn More</button>
+
+      <section class="team-section" aria-labelledby="team-heading">
+        <h2 id="team-heading">Meet the Team</h2>
+        <ul class="team-list">
+
+          <li class="team-member">
+            <svg class="team-photo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Photo of Alex Rivera">
+              <rect width="200" height="200" fill="#d0cce8"/>
+              <circle cx="100" cy="78" r="38" fill="#8878cc"/>
+              <ellipse cx="100" cy="175" rx="58" ry="42" fill="#8878cc"/>
+            </svg>
+            <p class="team-name">Alex Rivera</p>
+            <p class="team-title">Chief Executive Officer</p>
+          </li>
+
+          <li class="team-member">
+            <svg class="team-photo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Photo of Jordan Lee">
+              <rect width="200" height="200" fill="#cce0d0"/>
+              <circle cx="100" cy="78" r="38" fill="#5a9e74"/>
+              <ellipse cx="100" cy="175" rx="58" ry="42" fill="#5a9e74"/>
+            </svg>
+            <p class="team-name">Jordan Lee</p>
+            <p class="team-title">Head of Design</p>
+          </li>
+
+          <li class="team-member">
+            <svg class="team-photo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Photo of Sam Okafor">
+              <rect width="200" height="200" fill="#ccd8e8"/>
+              <circle cx="100" cy="78" r="38" fill="#4a7ab5"/>
+              <ellipse cx="100" cy="175" rx="58" ry="42" fill="#4a7ab5"/>
+            </svg>
+            <p class="team-name">Sam Okafor</p>
+            <p class="team-title">Lead Engineer</p>
+          </li>
+
+        </ul>
+      </section>
+
+      <section class="faq-section" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
+        <dl class="faq-list">
+
+          <div class="faq-item">
+            <dt>
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+                What services do you offer?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </dt>
+            <dd class="faq-answer" id="faq-answer-1" hidden>
+              We offer a wide range of services including consulting, design, development, and ongoing support. Our team works with you to find the right solution for your needs.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt>
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+                How do I get started?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </dt>
+            <dd class="faq-answer" id="faq-answer-2" hidden>
+              Getting started is easy. Fill out the contact form below or reach out directly via email. We'll schedule an initial consultation to discuss your goals and how we can help.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt>
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+                What are your support hours?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </dt>
+            <dd class="faq-answer" id="faq-answer-3" hidden>
+              Our support team is available Monday through Friday, 9 AM to 6 PM. For urgent issues outside those hours, premium support plans include 24/7 access.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt>
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+                Do you offer refunds?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </dt>
+            <dd class="faq-answer" id="faq-answer-4" hidden>
+              Yes. We offer a 30-day satisfaction guarantee on all plans. If you're not happy with the service, contact us within 30 days of purchase for a full refund, no questions asked.
+            </dd>
+          </div>
+
+          <div class="faq-item">
+            <dt>
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+                Can I upgrade or downgrade my plan?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </dt>
+            <dd class="faq-answer" id="faq-answer-5" hidden>
+              Absolutely. You can change your plan at any time from your account settings. Upgrades take effect immediately; downgrades apply at the start of your next billing cycle.
+            </dd>
+          </div>
+
+        </dl>
+      </section>
+
+      <section class="contact-section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact Us</h2>
+        <form class="contact-form" id="contact-form" novalidate>
+
+          <div class="form-group">
+            <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="full-name" name="full-name" autocomplete="name" required aria-required="true" aria-describedby="full-name-error">
+            <span class="field-error" id="full-name-error" role="alert" hidden></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required aria-required="true" aria-describedby="email-error">
+            <span class="field-error" id="email-error" role="alert" hidden></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number <span class="optional">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-error">
+            <span class="field-error" id="phone-error" role="alert" hidden></span>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject <span aria-hidden="true">*</span></label>
+            <select id="subject" name="subject" required aria-required="true" aria-describedby="subject-error">
+              <option value="">-- Select a subject --</option>
+              <option value="general">General Inquiry</option>
+              <option value="support">Technical Support</option>
+              <option value="billing">Billing</option>
+              <option value="feedback">Feedback</option>
+            </select>
+            <span class="field-error" id="subject-error" role="alert" hidden></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="5" required aria-required="true" aria-describedby="message-error"></textarea>
+            <span class="field-error" id="message-error" role="alert" hidden></span>
+          </div>
+
+          <div class="form-group form-submit">
+            <button type="submit" class="btn-submit">Send Message</button>
+          </div>
+
+          <p class="form-success" id="form-success" role="status" hidden>Your message has been sent. Thank you!</p>
+
+        </form>
+      </section>
+    </main>
+
+    <aside class="sidebar" aria-label="Related links">
+      <h2>Related Links</h2>
+      <ul>
+        <li><a href="#">Getting Started</a></li>
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">Tutorials</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <div class="divider-wrapper" aria-hidden="true">
+    <svg class="divider-svg" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#1a1a2e"/>
+    </svg>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="copyright">&copy; 2026 Sample Site. All rights reserved.</p>
+      <nav class="secondary-nav" aria-label="Secondary navigation">
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="modal-backdrop" hidden>
+    <dialog class="modal" id="modal" aria-labelledby="modal-title">
+      <h2 id="modal-title">Learn More</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
+      <button class="modal-close" id="close-modal" aria-label="Close dialog">Close</button>
+    </dialog>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
