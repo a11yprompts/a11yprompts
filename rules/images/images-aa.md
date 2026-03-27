@@ -4,23 +4,13 @@ title: Images — Level AA
 component: images
 level: AA
 confidence: medium
-discovered_in: [build-001]
-findings:
-  - id: F-001
-    sc: 1.4.3
-    component: Logo SVG text
-    note: Contrast ratio 1.81:1; minimum 4.5:1 required
-  - id: F-002
-    sc: 1.4.3
-    component: Hero image placeholder text
-    note: Contrast ratio 1.17:1–1.22:1; minimum 4.5:1 required
-  - id: F-010
-    sc: 1.4.5
-    component: Hero image placeholder text
-    note: Label rendered as SVG <text> element; plain HTML text should be used instead
+builds:
+  - build-001-claude-sonnet-4_6
+  - build-002-cursor-auto
 observed_failures:
   - tool: claude-code
-    version: claude-sonnet-4-6
+    frequency: high
+  - tool: cursor-auto
     frequency: high
 tags: [images, contrast, svg, color, text-in-images, images-of-text]
 ---
@@ -48,8 +38,9 @@ requirement. This applies only to actual logo lockups, not all SVG text.
 
 **SC 1.4.5 — Images of Text**
 If the same visual presentation can be achieved using real HTML text, use real text instead
-of an image of text. In build-001 (F-010), Claude Code rendered a hero section label as an
-SVG `<text>` element — users cannot resize, recolor, or adjust SVG text presentation.
+of an image of text. Confirmed in both builds — Claude Code (build-001 F-010) rendered a
+hero section label as an SVG `<text>` element; Cursor (build-002 F-006) rendered a hero
+`<img>` with embedded text. Users cannot resize, recolor, or adjust text baked into images.
 
 **Exceptions:** customizable by the user; essential to the information (e.g. handwriting
 samples, type specimens); logotypes.
@@ -124,6 +115,12 @@ text eliminates both the 1.4.5 violation and the uncontrollable contrast situati
   <image href="hero.jpg" width="1200" height="400"/>
   <text x="100" y="200" font-size="48" fill="#ffffff">Built for Everyone</text>
 </svg>
+
+<!-- ❌ <img> with text baked in (build-002 F-006)
+     Same 1.4.5 violation — different delivery. Real HTML text must be used instead -->
+<figure class="hero">
+  <img src="images/hero.svg" alt="Wide view of our workspace and team collaboration.">
+</figure>
 ```
 
 ---
@@ -153,8 +150,8 @@ Rule ID: `color-contrast`
 Cannot compute contrast for text on photographs, gradients, or complex backgrounds.
 
 **Axe Pro — Intelligent Guided Tests**
-`advanced/text-contrast` — how F-001 and F-002 were detected in build-001. Flags
-text-on-image contrast for human confirmation.
+`advanced/text-contrast` — how build-001 F-001 and F-002 were detected.
+`image-of-text` — how build-002 F-006 was detected. Both flag issues for human confirmation.
 
 **SC 1.4.5 — manual only**
 No axe-core rule exists. Ask: could this same presentation be achieved with real HTML

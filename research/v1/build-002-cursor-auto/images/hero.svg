@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" aria-hidden="true">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db"/>
+      <stop offset="100%" style="stop-color:#2c3e50"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="400" fill="url(#heroGrad)"/>
+  <text x="600" y="220" font-family="system-ui,sans-serif" font-size="48" fill="rgba(255,255,255,0.9)" text-anchor="middle">Hero image</text>
+</svg>

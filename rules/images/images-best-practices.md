@@ -4,15 +4,10 @@ title: Images — Best Practices
 component: images
 level: Best Practice
 confidence: high
-discovered_in: [build-001]
-findings:
-  - id: F-009
-    sc: 1.1.1
-    component: Team member photos
-    note: Alt text prefixed with "Photo of" — redundant, screen readers already announce the element as an image
+builds:
+  - build-001-claude-sonnet-4_6
 observed_failures:
   - tool: claude-code
-    version: claude-sonnet-4-6
     frequency: high
 tags: [images, alt-text, best-practice]
 ---

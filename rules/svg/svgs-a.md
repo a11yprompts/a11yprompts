@@ -4,15 +4,10 @@ title: SVGs — Level A
 component: svgs
 level: A
 confidence: medium
-discovered_in: [build-001]
-findings:
-  - id: F-004
-    sc: 4.1.2
-    component: Logo SVG inside link
-    note: SVG uses aria-hidden="true" but link has no accessible name; control is unlabeled
+builds:
+  - build-001-claude-sonnet-4_6
 observed_failures:
   - tool: claude-code
-    version: claude-sonnet-4-6
     frequency: high
 tags: [svg, aria-hidden, role, accessible-name, link]
 ---

@@ -4,15 +4,10 @@ title: Modal Dialogs — Level A
 component: modal
 level: A
 confidence: low
-discovered_in: [build-001]
-findings:
-  - id: F-003
-    sc: 1.3.2
-    component: Modal dialog
-    note: Screen reader can browse outside open modal; background content not hidden from AT
+builds:
+  - build-001-claude-sonnet-4_6
 observed_failures:
   - tool: claude-code
-    version: claude-sonnet-4-6
     frequency: high
 tags: [modal, dialog, aria-hidden, inert, screen-reader]
 ---

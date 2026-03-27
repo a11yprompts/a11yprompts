@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo logo-link" aria-label="Sample Site home">
+        <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40" aria-hidden="true">
+          <rect width="36" height="36" x="2" y="2" rx="6" fill="currentColor" opacity="0.9"/>
+          <text x="50" y="28" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="currentColor">Sample</text>
+        </svg>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="layout">
+    <main class="main-content">
+      <figure class="hero">
+        <img src="images/hero.svg" alt="Wide view of our workspace and team collaboration." width="1200" height="400" />
+        <figcaption>Welcome to our space — where ideas come to life.</figcaption>
+      </figure>
+      <h1 class="page-title">Page Title</h1>
+      <p class="lead">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <p>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus nulla facilisi.
+      </p>
+      <p>
+        <button type="button" class="btn-learn-more" data-modal-trigger>Learn More</button>
+      </p>
+
+      <section class="team-section" aria-labelledby="team-heading">
+        <h2 id="team-heading" class="team-heading">Our Team</h2>
+        <ul class="team-list">
+          <li class="team-member">
+            <img src="images/team-1.svg" alt="" width="200" height="200" />
+            <p class="team-name">Jordan Lee</p>
+            <p class="team-title">Chief Executive Officer</p>
+          </li>
+          <li class="team-member">
+            <img src="images/team-2.svg" alt="" width="200" height="200" />
+            <p class="team-name">Sam Chen</p>
+            <p class="team-title">Head of Product</p>
+          </li>
+          <li class="team-member">
+            <img src="images/team-3.svg" alt="" width="200" height="200" />
+            <p class="team-name">Alex Rivera</p>
+            <p class="team-title">Lead Designer</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="contact-section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" class="contact-heading">Contact Us</h2>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="contact-name">Full name <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="contact-name" name="name" required autocomplete="name" />
+            <span class="field-error" id="contact-name-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email address <span class="required" aria-hidden="true">*</span></label>
+            <input type="email" id="contact-email" name="email" required autocomplete="email" />
+            <span class="field-error" id="contact-email-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-phone">Phone number <span class="optional">(optional)</span></label>
+            <input type="tel" id="contact-phone" name="phone" autocomplete="tel" />
+            <span class="field-error" id="contact-phone-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-subject">Subject <span class="required" aria-hidden="true">*</span></label>
+            <select id="contact-subject" name="subject" required>
+              <option value="">Select a subject</option>
+              <option value="general">General inquiry</option>
+              <option value="support">Support</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Other</option>
+            </select>
+            <span class="field-error" id="contact-subject-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message <span class="required" aria-hidden="true">*</span></label>
+            <textarea id="contact-message" name="message" rows="5" required></textarea>
+            <span class="field-error" id="contact-message-error" role="alert"></span>
+          </div>
+          <button type="submit" class="btn-submit">Submit</button>
+        </form>
+      </section>
+
+      <section class="faq-section" aria-labelledby="faq-heading">
+        <h2 id="faq-heading" class="faq-heading">Frequently Asked Questions</h2>
+        <dl class="faq-list">
+          <div class="faq-item">
+            <dt>
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-1" id="faq-question-1" data-faq-trigger>
+                How do I get started?
+              </button>
+            </dt>
+            <dd id="faq-answer-1" class="faq-answer" role="region" aria-labelledby="faq-question-1" hidden>
+              Getting started is simple. Create an account, complete your profile, and follow the onboarding steps. Our team is also available to guide you through the process if you need assistance.
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-2" id="faq-question-2" data-faq-trigger>
+                What payment methods do you accept?
+              </button>
+            </dt>
+            <dd id="faq-answer-2" class="faq-answer" role="region" aria-labelledby="faq-question-2" hidden>
+              We accept all major credit cards, debit cards, and PayPal. For enterprise customers, we also offer invoicing and wire transfer options. Payment is processed securely at checkout.
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-3" id="faq-question-3" data-faq-trigger>
+                Can I cancel my subscription at any time?
+              </button>
+            </dt>
+            <dd id="faq-answer-3" class="faq-answer" role="region" aria-labelledby="faq-question-3" hidden>
+              Yes. You can cancel your subscription at any time from your account settings. Your access will continue until the end of your current billing period, and you will not be charged again.
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-4" id="faq-question-4" data-faq-trigger>
+                How do I contact support?
+              </button>
+            </dt>
+            <dd id="faq-answer-4" class="faq-answer" role="region" aria-labelledby="faq-question-4" hidden>
+              You can reach our support team via the contact form on this page, by email at support@example.com, or through the live chat in your account dashboard. We typically respond within one business day.
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>
+              <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-5" id="faq-question-5" data-faq-trigger>
+                Where can I find documentation?
+              </button>
+            </dt>
+            <dd id="faq-answer-5" class="faq-answer" role="region" aria-labelledby="faq-question-5" hidden>
+              Full documentation is available in our Help Center. You can browse by topic, search for specific guides, or watch short video tutorials. The Help Center is linked in the footer of every page.
+            </dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <aside class="sidebar" aria-label="Related links">
+      <h2 class="sidebar-title">Related Links</h2>
+      <ul class="related-links">
+        <li><a href="#">Related Article One</a></li>
+        <li><a href="#">Related Article Two</a></li>
+        <li><a href="#">Related Article Three</a></li>
+        <li><a href="#">Related Article Four</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <div class="divider-wrap" role="presentation">
+    <img src="images/divider.svg" alt="" width="1200" height="24" class="divider-img" />
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="copyright">&copy; 2025 Sample Site. All rights reserved.</p>
+      <nav class="secondary-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="learn-more-modal" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <div class="modal-inner">
+      <h2 class="modal-title" id="modal-title">Learn More</h2>
+      <div id="modal-desc">
+        <p>
+          This modal provides additional information. Nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Vitae suscipit tellus mauris a diam maecenas sed enim ut.
+        </p>
+        <p>
+          Volutpat blandit aliquam etiam erat velit scelerisque in dictum. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat orci. Elementum integer enim neque volutpat ac tincidunt vitae semper.
+        </p>
+      </div>
+      <button type="button" class="modal-close" data-modal-close aria-label="Close dialog">Close</button>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -4,15 +4,10 @@ title: Navigation — Level A
 component: navigation
 level: A
 confidence: high
-discovered_in: [build-001]
-findings:
-  - id: F-008
-    sc: 2.4.1
-    component: Page header
-    note: No skip navigation link provided; keyboard users must tab through all nav links to reach main content
+builds:
+  - build-001-claude-sonnet-4_6
 observed_failures:
   - tool: claude-code
-    version: claude-sonnet-4-6
     frequency: high
 tags: [navigation, skip-link, bypass-block, keyboard]
 ---
