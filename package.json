@@ -1,0 +1,28 @@
+{
+  "name": "a11yprompts",
+  "version": "0.1.0",
+  "description": "Accessibility rules for AI coding assistants, built from observed failures",
+  "type": "module",
+  "author": {
+    "name": "Nick Lundy",
+    "email": "nicholas.lundy@gmail.com",
+    "url": "https://nicklundy.com"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "build:claude": "node scripts/build.js --tool claude",
+    "build:cursor": "node scripts/build.js --tool cursor",
+    "build:a": "node scripts/build.js --level a",
+    "build:aa": "node scripts/build.js --level a,aa",
+    "build:all": "node scripts/build.js --level a,aa,best-practices,aaa"
+  },
+  "files": [
+    "dist/",
+    "rules/"
+  ],
+  "keywords": ["accessibility", "wcag", "a11y", "ai", "cursor", "claude"],
+  "license": "MIT",
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}

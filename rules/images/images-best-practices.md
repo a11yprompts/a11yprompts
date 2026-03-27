@@ -2,7 +2,7 @@
 id: images-best-practices
 title: Images — Best Practices
 component: images
-level: Best Practice
+level: best-practices
 confidence: high
 builds:
   - build-001-claude-sonnet-4_6
