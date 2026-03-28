@@ -1,5 +1,5 @@
 {
-  "name": "a11yprompts",
+  "name": "a11yskills",
   "version": "0.1.0",
   "description": "Accessibility rules for AI coding assistants, built from observed failures",
   "type": "module",

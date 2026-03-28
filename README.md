@@ -1,4 +1,4 @@
-# a11yprompts
+# a11yskills
 
 Accessibility rules for AI coding assistants — WCAG-grounded, empirically built from observed AI failures, compatible with Claude Code, Cursor, Copilot, and more.
 
@@ -9,13 +9,13 @@ Rules are not a dump of the WCAG spec. They are written in response to real fail
 ## Install
 
 ```bash
-npm install nicklundy/a11yprompts
+npm install nicklundy/a11yskills
 ```
 
 Once published to npm:
 
 ```bash
-npm install a11yprompts
+npm install a11yskills
 ```
 
 ---
@@ -27,7 +27,7 @@ npm install a11yprompts
 Add one line to your `CLAUDE.md` (create it if it doesn't exist):
 
 ```markdown
-@import ./node_modules/a11yprompts/dist/claude/a11yprompts.md
+@import ./node_modules/a11yskills/dist/claude/a11yskills.md
 ```
 
 ### Cursor
@@ -35,7 +35,7 @@ Add one line to your `CLAUDE.md` (create it if it doesn't exist):
 Copy the rule files into your project's Cursor rules folder:
 
 ```bash
-cp -r node_modules/a11yprompts/dist/cursor/rules/ .cursor/rules/a11yprompts/
+cp -r node_modules/a11yskills/dist/cursor/rules/ .cursor/rules/a11yskills/
 ```
 
 Rules land alongside any existing Cursor rules — no conflicts.
@@ -45,7 +45,7 @@ Rules land alongside any existing Cursor rules — no conflicts.
 ## Updating
 
 ```bash
-npm update a11yprompts
+npm update a11yskills
 ```
 
 **Claude Code** — nothing else needed. The `@import` picks up the updated file automatically.
@@ -53,7 +53,7 @@ npm update a11yprompts
 **Cursor** — re-copy the rules after updating:
 
 ```bash
-cp -r node_modules/a11yprompts/dist/cursor/rules/ .cursor/rules/a11yprompts/
+cp -r node_modules/a11yskills/dist/cursor/rules/ .cursor/rules/a11yskills/
 ```
 
 ---
@@ -111,7 +111,7 @@ Output is written to `dist/`:
 ```
 dist/
   claude/
-    a11yprompts.md         ← @import this in your CLAUDE.md
+    a11yskills.md         ← @import this in your CLAUDE.md
   cursor/
     rules/
       images-a.mdc
