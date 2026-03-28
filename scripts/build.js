@@ -33,7 +33,7 @@ const TOOLS  = toolArg  === 'all' ? ['claude', 'cursor'] : toolArg.split(',');
 const LEVELS = levelArg === 'all' ? ['a', 'aa', 'aaa', 'best-practices']
                                   : levelArg.split(',');
 
-console.log(`\n🔨 Building a11yprompts`);
+console.log(`\n🔨 Building a11yskills`);
 console.log(`   Tools:  ${TOOLS.join(', ')}`);
 console.log(`   Levels: ${LEVELS.join(', ')}\n`);
 
@@ -55,11 +55,11 @@ console.log(`📋 Found ${rules.length} rule(s) matching level filter\n`);
 
 function buildClaude(rules) {
   const header = [
-    `# a11yprompts — Accessibility Rules`,
+    `# a11yskills — Accessibility Rules`,
     `# Generated: ${new Date().toISOString()}`,
     `# Levels: ${LEVELS.join(', ')}`,
     `# DO NOT EDIT — regenerate with: npm run build`,
-    `# https://a11yprompts.org`,
+    `# https://a11yskills.org`,
     ``
   ].join('\n');
 
@@ -91,12 +91,12 @@ if (TOOLS.includes('claude')) {
   mkdirSync(claudeDir, { recursive: true });
 
   const content = buildClaude(rules);
-  const outPath = join(claudeDir, 'a11yprompts.md');
+  const outPath = join(claudeDir, 'a11yskills.md');
   writeFileSync(outPath, content, 'utf8');
 
-  console.log(`✅ Claude Code → dist/claude/a11yprompts.md (${rules.length} rules)`);
+  console.log(`✅ Claude Code → dist/claude/a11yskills.md (${rules.length} rules)`);
   console.log(`\n   📎 Add this line to your CLAUDE.md:`);
-  console.log(`      @import ./node_modules/a11yprompts/dist/claude/a11yprompts.md\n`);
+  console.log(`      @import ./node_modules/a11yskills/dist/claude/a11yskills.md\n`);
 }
 
 if (TOOLS.includes('cursor')) {
@@ -111,7 +111,7 @@ if (TOOLS.includes('cursor')) {
 
   console.log(`✅ Cursor       → dist/cursor/rules/ (${rules.length} files)`);
   console.log(`\n   📎 Copy or symlink into your project:`);
-  console.log(`      cp -r node_modules/a11yprompts/dist/cursor/rules/ .cursor/rules/a11yprompts\n`);
+  console.log(`      cp -r node_modules/a11yskills/dist/cursor/rules/ .cursor/rules/a11yskills\n`);
 }
 
 console.log('🎉 Build complete\n');
